@@ -1,0 +1,46 @@
+
+.clear{clear: both;}
+input{outline-style:none; outline:none;}
+
+
+/*不允许选取文字*/
+.select-text-none{moz-user-select: -moz-none; -moz-user-select: none; -o-user-select:none; -khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none; user-select:none;}
+
+
+/*阴影*/
+.shadow-concave{-webkit-box-shadow:inset 1px 1px 2px 1px #666666; -moz-box-shadow:inset 1px 1px 2px 1px #666666; box-shadow:inset 1px 1px 2px 1px #666666;}
+.shadow-convex{-webkit-box-shadow:2px 2px 4px 0px #666666; -moz-box-shadow:2px 2px 4px 0px #666666; box-shadow:2px 2px 4px 0px #666666;}
+
+.shadow-top{-webkit-box-shadow:2px 2px 4px 0px #666666; -moz-box-shadow:2px 2px 4px 0px #666666; box-shadow:2px 2px 4px 0px #666666;}
+
+
+/*滚动条*/
+.scroll-block{overflow:auto;}
+.scroll-block::-webkit-scrollbar{width:4px;height:4px;}
+.scroll-block::-webkit-scrollbar-track{background: #E6E6FA;border-radius:4px;}
+.scroll-block::-webkit-scrollbar-thumb{background: #becccc;border-radius:4px;}
+
+.scroll-block-x{overflow-x:auto; overflow-y:hidden;}
+.scroll-block-x::-webkit-scrollbar{width:4px;height:4px;}
+.scroll-block-x::-webkit-scrollbar-track{background: #E6E6FA;border-radius:4px;}
+.scroll-block-x::-webkit-scrollbar-thumb{background: #becccc;border-radius:4px;}
+
+.scroll-block-y{overflow:auto hidden;}
+.scroll-block-y::-webkit-scrollbar{width:4px;height:4px;}
+.scroll-block-y::-webkit-scrollbar-track{background: #E6E6FA;border-radius:4px;}
+.scroll-block-y::-webkit-scrollbar-thumb{background: #becccc;border-radius:4px;}
+
+
+/*hover*/
+.hover-bg-blue-5:hover{background: rgba(0, 0, 200, 0.5);}
+.hover-bg-blue-2:hover{background: rgba(0, 0, 200, 0.2);}
+.hover-cursor-disable:hover{cursor:not-allowed;}
+
+
+/*发光效果*/
+.bloom{
+	-webkit-transition:border linear .2s,-webkit-box-shadow linear .2s;
+	outline:none;
+	border-color:rgba(241,39,242,.6);
+	-webkit-box-shadow:0 0 8px rgba(241,39,232,.3);
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box{				
+				position: relative;
+				width: 400px;
+				height: 650px;
+				background: url(img/bk.png) no-repeat;
+				background-size: 100% 100%;
+				overflow: hidden;
+			}
+			#bk{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				
+			}
+			#yun{
+				width: 100%;
+				height: 100%;
+				left: 1px;
+				position: absolute;
+				z-index: 1;
+			}
+
+			#dl{
+				width:100px;
+				height:120px;
+				top:-5px;
+				left:30px;
+				position:absolute;
+				z-index: 2;
+				animation: swing 3s infinite ease-in-out;
+			}
+			@keyframes swing{
+  					0% {
+   			 transform: rotate(-6deg);
+  			}  50% {
+   			 transform: rotate(6deg);
+  			}  100% {
+    		transform: rotate(-6deg);
+  			}
+			}
+			#quit{
+				width:100px;
+				height:35px;
+				top:23px;
+				left:293px;
+				position:absolute;
+				z-index: 2;
+				animation: big 1.5s;
+			}
+			@keyframes big{
+				from{transform: scale(0.3);opacity: 0.3;}
+				to{transform: scale(1);opacity: 1;}
+			}
+			#yinle{
+				width:35px;
+				height:35px;
+				top:20px;
+				left:20px;
+				position:absolute;
+				z-index: 2;
+				animation: rotate 4s linear infinite;	
+			}
+			@keyframes rotate{
+				0%{
+					transform: rotate(0);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+			#wwj{
+				width:315px;
+				height:100px;
+				top:58px;
+				left:45px;
+				position:absolute;
+				z-index: 2;
+				animation: top 1s ;
+			}
+			@keyframes top{
+				0%{transform: translateY(-100%);}
+				100%{transform: translateY(0);}
+			}
+			
+			#top{
+				width:360px;
+				height:30px;
+				top:155px;
+				left:20px;
+				position:absolute;
+				z-index: 5;
+			}
+			#robot{
+				width:360px;
+				height:450px;
+				top:165px;
+				left:20px;
+				position:absolute;
+			}
+			@keyframes bottom{
+				from{transform: translateY(100%);}
+				to{transform: translateY(0);}
+			}
+
+			#coin{
+				width:30px;
+				height:30px;
+				top:425px;
+				left:17px;
+				position:absolute;
+				z-index: 1;
+			}
+			#toubi{
+				width:45px;
+				height:45px;
+				top:410px;
+				left:185px;
+				position:absolute;
+				z-index: 1;
+			}
+			#left{
+				width:50px;
+				height:70px;
+				top:415px;
+				left: 240px;
+				position:absolute;
+				z-index: 1;
+			}
+			#right{
+				width:50px;
+				height:70px;
+				top:415px;
+				left: 305px;
+				position:absolute;
+				z-index: 1;
+			}
+			#zhua{
+				width:66px;
+				height:70px;
+				top:170px;
+				left: 60px;
+				position:absolute;
+				z-index: 1;
+			}
+			#b3{
+				width:50px;
+				height:50px;
+				top:328px;
+				left: 176px;
+				position:absolute;
+				z-index: 1;
+			}
+			#b1{
+				width:60px;
+				height:60px;
+				top:320px;
+				left:220px;
+				position:absolute;
+				z-index: 1;
+			}
+			#b2{
+				width:70px;
+				height:70px;
+				top:310px;
+				left:280px;
+				position:absolute;
+				z-index: 1;
+			}
+				#light1{
+				width:75px;
+				height:15px;
+				top:498px;
+				left:265px;
+				position:absolute;
+				z-index: 1;
+				animation: l1 1s infinite;
+				animation-delay: 0.25s;
+			}
+			@keyframes l1{
+				from{opacity: 1;}
+				to{opacity: 0.5}
+			}
+			#light2{
+				width:75px;
+				height:15px;
+				top:528px;
+				left:265px;
+				position:absolute;
+				z-index: 1;
+				animation: l1 1s infinite;
+				animation-delay: 0.50s;
+			}
+			#light3{
+				width:75px;
+				height:15px;
+				top:558px;
+				left:265px;
+				position:absolute;
+				z-index: 1;
+				animation: l1 1s infinite;
+				animation-delay: 0.75s;
+			}
+			#start{
+				position: relative;
+				width: 190px;
+				z-index: 10;
+				top: 390px;
+				left: 75px;
+			}
+			#white {
+				background: url(img/p5/gz.png);
+				position: relative;
+				z-index: 25;
+				width: 330px;
+				height: 480px;
+				background-size: 100% 100%;
+				top: 140px;
+				left: 35px;
+				animation: short 0.7s;
+				display: none;
+			}
+			@keyframes short{
+				from{transform: scale(0.2); opacity: 0.2;}
+				to{transform: scale(1); opacity: 1;}
+			}
+			#text{
+				padding: 15px 30px;
+				line-height: 30px;
+			}
+			#yxj {
+				animation: bottom 1s;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		<div id="bk">
+			<img src="img/p5/yun.png" id="yun" alt="" />
+			<img src="img/p5/dl.png" id="dl" alt="" />
+			<img src="img/p5/quit.png" id="quit" alt="" onclick="quit()" />
+			<img src="img/p5/yinle.png" id="yinle" alt="" />
+			<img src="img/p4/wwj.png" id="wwj" alt="" />
+			<div id="yxj">
+			<img src="img/p2/top.png" id="top" alt="" />
+			<img src="img/p5/robot.png" id="robot" alt="" />
+			<img src="img/p5/coin.png" id="coin" alt="" />
+			<img src="img/p5/toubi.png" id="toubi" alt="" />
+			<img src="img/p5/left.png" id="left" alt="" />
+			<img src="img/p5/right.png" id="right" alt="" />
+			<img src="img/p5/zhua.png" id="zhua" alt="" />
+			<img src="img/p5/b3.png" id="b3" alt="" />
+			<img src="img/p5/b1.png" id="b1" alt="" />
+			<img src="img/p5/b2.png" id="b2" alt="" />
+			<img src="img/p5/light.png" id="light1" alt="" />
+			<img src="img/p5/light.png" id="light2" alt="" />
+			<img src="img/p5/light.png" id="light3" alt="" />
+			</div>
+			<div id="white">
+				<img src="img/p5/start.png" id="start" alt="" onclick="start()" />
+				<div id="text">在规定时间内，进行点击投币按钮投入硬币，点击左右按钮进
+					行移动抓钩，点击GO按钮，抓钩下落进行抓取月饼，注意：仅有一次投币机会，
+					抓到一个月饼即为顺利。</div>
+			</div>
+			</div>
+			</div>
+	</body>
+</html>
+<script src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	function start(){
+		location.href="p5.html";
+	}
+	function quit(){
+		location.href="p2.html";
+	}
+	var wwj = document.getElementById("wwj");
+	var white = document.getElementById("white");
+	wwj.addEventListener("animationend",function(){
+		white.style.display='block';
+	});
+</script>

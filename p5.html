@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box{				
+				position: relative;
+				width: 400px;
+				height: 650px;
+				background: url(img/bk.png) no-repeat;
+				background-size: 100% 100%;
+			}
+			#bk{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				
+			}
+			#yun{
+				width: 100%;
+				height: 100%;
+				left: 1px;
+				position: absolute;
+				z-index: 1;
+			}
+
+			#dl{
+				width:100px;
+				height:120px;
+				top:-5px;
+				left:30px;
+				position:absolute;
+				z-index: 2;
+				animation: swing 3s infinite ease-in-out;
+			}
+			@keyframes swing{
+  					0% {
+   			 transform: rotate(-6deg);
+  			}  50% {
+   			 transform: rotate(6deg);
+  			}  100% {
+    		transform: rotate(-6deg);
+  			}
+			}
+			#quit{
+				width:100px;
+				height:35px;
+				top:23px;
+				left:293px;
+				position:absolute;
+				z-index: 2;
+			}
+			#yinle{
+				width:35px;
+				height:35px;
+				top:20px;
+				left:20px;
+				position:absolute;
+				z-index: 2;
+				animation: rotate 4s linear infinite;	
+			}
+			@keyframes rotate{
+				0%{
+					transform: rotate(0);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+			#wwj{
+				width:315px;
+				height:100px;
+				top:58px;
+				left:45px;
+				position:absolute;
+				z-index: 2;
+			}
+			#top{
+				width:360px;
+				height:30px;
+				top:155px;
+				left:20px;
+				position:absolute;
+				z-index: 5;
+			}
+			#robot{
+				width:360px;
+				height:450px;
+				top:165px;
+				left:20px;
+				position:absolute;
+			}
+
+			#coin{
+				width:30px;
+				height:30px;
+				top:425px;
+				left:17px;
+				position:absolute;
+				z-index: 1;
+				
+			}
+			.copper{
+				animation: money 10s linear ;
+			}
+			@keyframes money{
+				12%{left: 1200px; width: 50px;height: 50px; top: 330px;transform: rotate(360deg);}
+				24%{left: 100px; width: 80px;height: 80px;  top: 30px;}
+				36%{left: 1100px;width: 100px;height: 100px;  top: 600px;}
+				48%{left: 700px; width: 80px;height: 80px;  top: 10px;;}
+				60%{left: 50px; width: 50px;height: 50px; top: 425px;}
+				72%{left: 800px; width: 30px;height: 30px; top: 425px;transform: rotateY(0deg);}
+				84%{left: 800px;width: 200px;height: 200px;  top: 50px; transform: rotateY(360deg);}
+				100%{left: 50px;width: 0px;height: 0px;  top: 425px; ;}
+			}
+			#toubi{
+				width:45px;
+				height:45px;
+				top:410px;
+				left:185px;
+				position:absolute;
+				z-index: 2;
+			}
+			#go{
+				width:45px;
+				height:45px;
+				top:410px;
+				left:185px;
+				position:absolute;
+				z-index: 1;
+			}
+			#left{
+				width:50px;
+				height:70px;
+				top:415px;
+				left: 240px;
+				position:absolute;
+				z-index: 1;
+			}
+			#right{
+				width:50px;
+				height:70px;
+				top:415px;
+				left: 305px;
+				position:absolute;
+				z-index: 1;
+			}
+			#zhua{
+				width:66px;
+				height:70px;
+				top:170px;
+				left: 60px;
+				position:absolute;
+				z-index: 1;
+			}
+			.zhuas{
+				animation: hudu 3s ;
+			}
+			@keyframes hudu{
+				0%{transform: translateX(0px) translateY(0px);}
+				50%{transform: rotateZ(-25deg) translateX(90px) translateY(140px);}
+				100%{transform: rotateZ(0deg) translateX(230px) translateY(0px);}
+			}
+			#b3{
+				width:50px;
+				height:50px;
+				top:328px;
+				left: 176px;
+				position:absolute;
+				z-index: 1;
+			}
+			#b1{
+				width:60px;
+				height:60px;
+				top:320px;
+				left:220px;
+				position:absolute;
+				z-index: 1;
+			}
+			.b1s{
+				animation: fei 1.4s ;
+				animation-delay: 1.4s;
+			}
+			@keyframes fei{
+				0%{transform: rotate(360deg);}
+				100%{top: 210px; left: 290px;}
+			}
+			#b2{
+				width:70px;
+				height:70px;
+				top:310px;
+				left:280px;
+				position:absolute;
+				z-index: 1;
+			}
+			#light1{
+				width:75px;
+				height:15px;
+				top:498px;
+				left:265px;
+				position:absolute;
+				z-index: 1;
+				animation: l1 1s infinite;
+				animation-delay: 0.25s;
+			}
+			@keyframes l1{
+				from{opacity: 1;}
+				to{opacity: 0.5}
+			}
+			#light2{
+				width:75px;
+				height:15px;
+				top:528px;
+				left:265px;
+				position:absolute;
+				z-index: 1;
+				animation: l1 1s infinite;
+				animation-delay: 0.50s;
+			}
+			#light3{
+				width:75px;
+				height:15px;
+				top:558px;
+				left:265px;
+				position:absolute;
+				z-index: 1;
+				animation: l1 1s infinite;
+				animation-delay: 0.75s;
+			}
+			#start{
+				position: relative;
+				width: 190px;
+				z-index: 10;
+				top: 390px;
+				left: 75px;
+			}	
+			#text{
+				padding: 15px 30px;
+				line-height: 30px;
+			}
+			#yxj {
+				animation: bottom 1s;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		<div id="bk">
+			<img src="img/p5/yun.png" id="yun" alt="" />
+			<img src="img/p5/dl.png" id="dl" alt="" />
+			<img src="img/p5/quit.png" id="quit" alt="" onclick="quit()" />
+			<img src="img/p5/yinle.png" id="yinle" alt="" />
+			<img src="img/p4/wwj.png" id="wwj" alt="" />
+			<div id="yxj">
+			<img src="img/p2/top.png" id="top" alt="" />
+			<img src="img/p5/robot.png" id="robot" alt="" />
+			<img src="img/p5/coin.png" id="coin" alt="" />
+			<img src="img/p5/toubi.png" id="toubi" alt="" onclick="cl()"/>
+			<img src="img/p5/go.png" id="go" alt="" onclick="gos()" />
+			<img src="img/p5/left.png" id="left" alt="" />
+			<img src="img/p5/right.png" id="right" alt="" />
+			<img src="img/p5/zhua.png" id="zhua" alt="" />
+			<img src="img/p5/b3.png" id="b3" alt="" />
+			<img src="img/p5/b1.png" id="b1" alt="" />
+			<img src="img/p5/b2.png" id="b2" alt="" />
+			<img src="img/p5/light.png" id="light1" alt="" />
+			<img src="img/p5/light.png" id="light2" alt="" />
+			<img src="img/p5/light.png" id="light3" alt="" />
+			</div>
+			</div>
+			</div>
+	</body>
+</html>
+<script src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	function quit(){
+		location.href="p2.html";
+	}
+	var toubi = document.getElementById("toubi");
+	var money = document.getElementById("coin");
+	var zhua =document.getElementById("zhua");
+	var b1 =document.getElementById("b1");
+	var go = document.getElementById("go");
+	function cl(){
+		money.classList.add("copper")
+	}
+	money.addEventListener("animationend",function(){
+		money.style.display = 'none';
+		toubi.style.display = 'none';
+	});
+	function gos(){
+		zhua.classList.add("zhuas");
+		b1.classList.add("b1s");
+		b1.addEventListener("animationend",function(){
+			location.href="p6.html";
+		});
+	}
+	var ligth1 = document.getElementById("light1");
+	var ligth2 = document.getElementById("light2");
+	var ligth3 = document.getElementById("light3");
+	
+</script>
